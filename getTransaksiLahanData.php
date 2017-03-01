@@ -31,14 +31,11 @@
 				
 			}
 			$respon["sukses"] = 1;
-	                    echo json_encode($respon);
 		}
 		else {
 			$respon["sukses"] = 0;
-			$respon["pesan"] = "Tidak ada data";
-
-			echo json_encode($respon);
+			$respon["pesan"] = "Tidak ada data";	
 		}
-
 	}
+	echo json_encode($respon);
 ?>	
