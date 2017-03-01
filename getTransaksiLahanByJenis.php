@@ -9,13 +9,15 @@
 
 	if (isset($_GET['id_lahan'])) {
 	    $id_lahan = $_GET['id_lahan'];
+	    $jenis_transaksi = $_GET['jenis_transaksi'];
 
 	    if($result = $mysqli->query("SELECT transaksi_lahan.*, 
 				lahan.id_lahan,
 				lahan.nama_lahan
 			FROM transaksi_lahan, lahan
 			WHERE transaksi_lahan.lahan_id_lahan = lahan.id_lahan
-			AND transaksi_lahan.lahan_id_lahan = '$id_lahan';")) {
+			AND transaksi_lahan.lahan_id_lahan = '$id_lahan'
+			AND transaksi_lahan.jenis_transaksi = '$jenis_transaksi';")) {
 			$respon["transaksi_lahan"]=array();
 			while($row = $result->fetch_array(MYSQL_ASSOC)) {
 				$transaksi_lahan = array();
