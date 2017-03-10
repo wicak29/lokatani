@@ -17,7 +17,7 @@
 		if($result = $mysqli->query("INSERT INTO transaksi_lahan(nama_transaksi, jenis_transaksi, jumlah_transaksi, waktu_transaksi, lahan_id_lahan)
 			VALUES ('$nama_transaksi','$jenis','$jumlah_transaksi', '$waktu', '$id_lahan')")) {
 			$respon["sukses"] = 1;
-			$respon["pesan"] = "Berhasil menambah data Pengguna";
+			$respon["pesan"] = "Berhasil menyimpan transaksi";
 
 			echo json_encode($respon);
 		}
