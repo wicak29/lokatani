@@ -19,7 +19,7 @@
 		if($result = $mysqli->query("INSERT INTO lahan(nama_lahan, tipe_lahan, luas_lahan, gambar_lahan, lokasi_lahan)
 			VALUES ('$nama','$tipe','$luas', '$gambar','$lokasi')")) {
 			$respon["sukses"] = 1;
-			$respon["pesan"] = "Berhasil menambah data Pengguna";
+			$respon["pesan"] = "Berhasil menambah data lahan";
 
 			echo json_encode($respon);
 		}

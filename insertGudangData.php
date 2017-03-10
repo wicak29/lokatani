@@ -15,7 +15,7 @@
 		if($result = $mysqli->query("INSERT INTO gudang(nama_gudang, jumlah_kapasitas, lokasi_gudang)
 			VALUES ('$nama_gudang','$kapasitas','$lokasi')")) {
 			$respon["sukses"] = 1;
-			$respon["pesan"] = "Berhasil menambah data Pengguna";
+			$respon["pesan"] = "Berhasil menambah data gudang";
 
 			echo json_encode($respon);
 		}
